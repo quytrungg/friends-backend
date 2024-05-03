@@ -1,0 +1,15 @@
+<div id="<%= dom_id friend %>" class="jumbotron">
+  <h1 class="display-4">
+    <%= friend.first_name %> <%= friend.last_name %>
+  </h1>
+  <p class="lead">
+    <%= friend.email %>
+  </p>
+  <hr class="my-4">
+  <p><%= friend.phone %></p>
+  <p><%= friend.twitter %></p>
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-warning" %>
+  <%= link_to "Back to friends", friends_path, class: "btn btn-info" %>
+  <%= link_to "Destroy this friend", @friend, method: :delete, class: "btn btn-danger" %>
+
+</div>
